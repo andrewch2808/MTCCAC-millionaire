@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Audio Player</title>
+</head>
+<body>
+    <h1>Listen to My Audio</h1>
+    
+    <!-- Path points to the nested folder structure -->
+    <audio controls>
+        <source src="bgm_fx/play_now.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
