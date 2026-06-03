@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -74,7 +74,7 @@
   }
 
   .logo-circle {
-    width: 180px; height: 180px;
+    width: 560px; height: 560px;
     border-radius: 50%;
     border: 3px solid var(--gold);
     background: radial-gradient(circle, #1e007a 0%, #03000f 70%);
@@ -181,6 +181,14 @@
     display: block; margin-bottom: 10px;
   }
 
+  .module-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 13px; letter-spacing: 3px;
+    color: rgba(160,200,255,0.80);
+    text-transform: uppercase;
+    display: block; margin-bottom: 4px;
+  }
+
   .category-badge {
     font-family: 'Cinzel', serif;
     font-size: 26px; font-weight: 700;
@@ -285,7 +293,7 @@
   /* ── Final answer confirmation bar ── */
   .confirm-bar {
     text-align: center;
-    padding: 18px 24px;
+    padding: 36px 40px;
     background: rgba(0,0,55,0.70);
     border: 1px solid rgba(120,90,255,0.30);
     border-radius: 6px;
@@ -295,15 +303,15 @@
 
   .confirm-text {
     font-family: 'Cinzel', serif;
-    font-size: clamp(13px, 1.6vw, 17px);
+    font-size: clamp(22px, 2.8vw, 34px);
     color: var(--gold);
     letter-spacing: 1px;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
   }
 
   .confirm-btns {
     display: flex;
-    gap: 14px;
+    gap: 24px;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -365,7 +373,7 @@
     flex: 1; min-height: 0;
     display: flex; align-items: center;
     justify-content: space-between;
-    padding: 0 16px; font-size: 14px;
+    padding: 0 16px; font-size: 17px;
     color: rgba(255,255,255,0.38);
     border-bottom: 1px solid rgba(255,255,255,0.04);
     transition: all 0.3s;
@@ -373,7 +381,7 @@
 
   .ladder-item.active {
     background: rgba(255,215,0,0.14);
-    color: var(--gold); font-weight: 700; font-size: 15px;
+    color: var(--gold); font-weight: 700; font-size: 19px;
     border-left: 3px solid var(--gold);
   }
 
@@ -383,10 +391,10 @@
 
   .ladder-item .level-num {
     font-family: 'Cinzel', serif;
-    font-size: 11px; min-width: 22px; opacity: 0.65;
+    font-size: 13px; min-width: 22px; opacity: 0.65;
   }
 
-  .ladder-item .money-val { font-weight: 600; font-size: 14px; text-align: right; }
+  .ladder-item .money-val { font-weight: 600; font-size: 17px; text-align: right; }
 
   /* ── Overlay panels ── */
   .overlay-panel {
@@ -431,28 +439,29 @@
 
   /* ── Audience chart ── */
   .audience-bars {
-    display: flex; gap: 16px;
+    display: flex; gap: 28px;
     justify-content: center; align-items: flex-end;
-    height: 160px; margin: 20px 0; padding: 0 8px;
+    height: 380px; margin: 28px 0; padding: 0 12px;
   }
 
   .audience-bar-wrap {
     display: flex; flex-direction: column;
     align-items: center; justify-content: flex-end;
-    gap: 6px; flex: 1; height: 100%;
+    gap: 14px; flex: 1; height: 100%;
   }
 
-  .audience-pct { font-weight: 700; font-size: 14px; color: var(--gold); flex-shrink: 0; }
+  .audience-pct { font-weight: 700; font-size: 30px; color: var(--gold); flex-shrink: 0; }
 
   .audience-bar {
     width: 100%;
-    background: linear-gradient(180deg, rgba(60,100,255,0.9) 0%, rgba(0,40,200,0.9) 100%);
-    border-radius: 2px 2px 0 0; flex-shrink: 0;
+    background: linear-gradient(180deg, rgba(80,130,255,1) 0%, rgba(0,50,220,1) 100%);
+    border-radius: 6px 6px 0 0; flex-shrink: 0;
+    box-shadow: 0 0 18px rgba(60,100,255,0.55);
     transition: height 0.9s cubic-bezier(0.22,1,0.36,1);
   }
 
   .audience-bar-label {
-    font-family: 'Cinzel', serif; font-size: 14px;
+    font-family: 'Cinzel', serif; font-size: 30px;
     color: var(--gold); font-weight: 700; flex-shrink: 0;
   }
 
@@ -497,9 +506,9 @@
     background: rgba(0,0,40,0.55);
     border: 1px solid rgba(100,80,255,0.22);
     border-radius: 4px;
-    padding: 11px 15px;
-    margin-bottom: 12px;
-    font-size: 13px;
+    padding: 22px 28px;
+    margin-bottom: 20px;
+    font-size: 24px;
     color: rgba(195,205,255,0.85);
     line-height: 1.65;
     text-align: left;
@@ -510,23 +519,14 @@
     background: rgba(0,90,0,0.28);
     border: 1px solid rgba(0,200,80,0.38);
     border-radius: 4px;
-    padding: 10px 15px;
-    margin-bottom: 14px;
-    font-size: 15px; font-weight: 600;
+    padding: 20px 28px;
+    margin-bottom: 24px;
+    font-size: 28px; font-weight: 600;
     color: var(--correct);
     text-align: left;
   }
 
-  .audio-toggle {
-    position: fixed; bottom: 20px; right: 20px;
-    background: rgba(0,0,35,0.90);
-    border: 1px solid rgba(100,80,255,0.30);
-    border-radius: 50%; width: 44px; height: 44px;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; font-size: 20px; z-index: 200;
-    color: var(--gold); transition: background 0.2s;
-  }
-  .audio-toggle:hover { background: rgba(0,20,100,0.90); }
+
 
   /* ── Responsive ── */
   @media (max-width: 800px) {
@@ -658,10 +658,10 @@
 
   <!-- INTRO -->
   <div id="intro-screen" class="screen active">
-    <div class="logo-circle">£?</div>
+    <img src="images/logo-removebg.png" alt="Logo" class="logo-circle" style="object-fit:contain;">
     <div>
       <h1 class="main-title">Who Wants to Be<br>a Millionaire?</h1>
-      <p class="subtitle">Can you go all the way?</p>
+      <p class="subtitle">Review Session, June 2026</p>
     </div>
     <p class="press-anywhere" id="press-anywhere">✦ Press anywhere to start ✦</p>
     <button class="btn-start intro-hidden" id="btn-start" onclick="startGame()">▶ PLAY NOW</button>
@@ -671,6 +671,7 @@
   <div id="game-screen" class="screen">
     <div class="game-left">
       <div class="question-panel">
+        <div class="module-badge" id="module-badge"></div>
         <div class="category-badge" id="category-badge"></div>
         <div class="level-badge" id="level-badge">LEVEL 1 — $100</div>
         <div id="question-text">Loading question...</div>
@@ -705,8 +706,8 @@
       <div class="confirm-bar hidden" id="confirm-bar">
         <p class="confirm-text">Are you sure this is your final answer?</p>
         <div class="confirm-btns">
-          <button class="btn-action btn-gold" onclick="confirmAnswer()">✓ Yes, Final Answer!</button>
-          <button class="btn-action btn-outline" onclick="cancelAnswer()">✗ No, Change</button>
+          <button class="btn-action btn-gold" onclick="confirmAnswer()" style="font-size:22px; padding:20px 56px;">✓ Yes, Final Answer!</button>
+          <button class="btn-action btn-outline" onclick="cancelAnswer()" style="font-size:22px; padding:20px 56px;">✗ No, Change</button>
         </div>
       </div>
     </div>
@@ -739,36 +740,36 @@
 
 <!-- ANSWER CORRECT OVERLAY -->
 <div class="overlay-panel" id="correct-overlay">
-  <div class="panel-box">
-    <div style="font-size:48px;margin-bottom:12px">✅</div>
-    <h2>Correct!</h2>
+  <div class="panel-box" style="max-width:820px;">
+    <div style="font-size:80px;margin-bottom:16px">✅</div>
+    <h2 style="font-size:52px;margin-bottom:18px;">Correct!</h2>
     <div class="overlay-question" id="correct-question-text"></div>
     <div class="overlay-correct-answer" id="correct-answer-text"></div>
-    <p id="correct-msg">That's the right answer!</p>
-    <div class="money-won" id="correct-money"></div>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
-      <button class="btn-action btn-gold" id="btn-next-level" onclick="nextLevel()">Next Level →</button>
-      <button class="btn-action btn-outline" id="btn-leave-game" onclick="leaveGame()">Walk Away</button>
+    <p id="correct-msg" style="font-size:26px;margin-bottom:20px;">That's the right answer!</p>
+    <div class="money-won" id="correct-money" style="font-size:52px;"></div>
+    <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+      <button class="btn-action btn-gold" id="btn-next-level" onclick="nextLevel()" style="font-size:22px;padding:20px 56px;">Next Level →</button>
+      <button class="btn-action btn-outline" id="btn-leave-game" onclick="leaveGame()" style="font-size:22px;padding:20px 56px;">Walk Away</button>
     </div>
   </div>
 </div>
 
 <!-- WRONG ANSWER OVERLAY -->
 <div class="overlay-panel" id="wrong-overlay">
-  <div class="panel-box">
-    <div style="font-size:48px;margin-bottom:12px">❌</div>
-    <h2 style="color:#FF4444">Game Over!</h2>
+  <div class="panel-box" style="max-width:820px;">
+    <div style="font-size:80px;margin-bottom:16px">❌</div>
+    <h2 style="color:#FF4444;font-size:52px;margin-bottom:18px;">Game Over!</h2>
     <div class="overlay-question" id="wrong-question-text"></div>
     <div class="overlay-correct-answer" id="wrong-answer-text"></div>
-    <p id="wrong-msg"></p>
-    <div class="money-won" id="wrong-safenet" style="font-size:24px"></div>
-    <button class="btn-action btn-gold" onclick="restartGame()">Play Again</button>
+    <p id="wrong-msg" style="font-size:26px;margin-bottom:20px;"></p>
+    <div class="money-won" id="wrong-safenet" style="font-size:36px"></div>
+    <button class="btn-action btn-gold" onclick="restartGame()" style="font-size:22px;padding:20px 56px;margin-top:20px;">Play Again</button>
   </div>
 </div>
 
 <!-- AUDIENCE OVERLAY -->
 <div class="overlay-panel" id="audience-overlay">
-  <div class="panel-box">
+  <div class="panel-box" style="max-width:820px;">
     <h2>Ask the Audience</h2>
     <p>The audience has voted!</p>
     <div class="audience-bars" id="audience-bars"></div>
@@ -778,10 +779,10 @@
 
 <!-- PHONE A FRIEND OVERLAY -->
 <div class="overlay-panel" id="call-overlay">
-  <div class="panel-box">
-    <h2>📞 Phone a Friend</h2>
-    <p id="call-question-text" style="margin-bottom:8px"></p>
-    <div class="friend-advice" id="friend-advice"></div>
+  <div class="panel-box" style="max-width:820px;">
+    <h2 style="font-size:48px;">📞 Phone a Friend</h2>
+    <p id="call-question-text" style="margin-bottom:16px; font-size:26px;"></p>
+    <div class="friend-advice" id="friend-advice" style="font-size:28px; padding:28px 32px; line-height:1.7;"></div>
     <button class="btn-action btn-gold" onclick="closeOverlay('call-overlay')">Thanks!</button>
   </div>
 </div>
@@ -809,7 +810,7 @@
   </div>
 </div>
 
-<div class="audio-toggle" id="audio-toggle" onclick="toggleAudio()" title="Toggle Music">🔊</div>
+
 
 <audio id="bg-music" loop>
   <source src="https://www.soundjay.com/misc/sounds/fail-buzzer-02.mp3" type="audio/mpeg">
@@ -843,6 +844,10 @@
   <source src="bgm_fx/winner.mp3" type="audio/mpeg">
 </audio>
 
+<audio id="selected-sound">
+  <source src="bgm_fx/selected.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 // ======================== DATA ========================
 const MONEY_LADDER = [
@@ -865,266 +870,124 @@ const MONEY_LADDER = [
 
 // ======================== GAME DATA ========================
 const GAME_QUESTIONS = [
-  // LEVEL 1
-  {
-    level: 1, category: "何時, 何人? / When and Who?",
-    q: "English: After Jesus was baptized, a voice from heaven said, \"This is my Son, whom I love.\" Who spoke that voice?\nChinese: 耶穌受洗後，有聲音說：「這是我的愛子。」那聲音是誰的？",
-    a: "God the Father / 父神", b: "An archangel / 一位天使長", c: "Moses and Elijah / 摩西和以利亞", d: "John the Baptist / 施洗約翰",
-    correct: "A"
-  },
-  {
-    level: 1, category: "金句題 / Bible Verse",
-    q: "God showed his love by sending his _____ into the world.\n神差他_____到世間來，顯明他的愛。",
-    a: "only son / 獨生子", b: "Servant / 僕人", c: "Angel / 天使", d: "Prophet / 先知",
-    correct: "A"
-  },
-  // LEVEL 2
-  {
-    level: 2, category: "金句題 / Bible Verse",
-    q: "The Sovereign Lord says: \"I myself will search and find my .\"\n主耶和華說：『看哪，我必親自尋找我的，將牠們尋見。』",
-    a: "sheep / 羊", b: "coins / 錢", c: "children / 兒女", d: "servants / 僕人",
-    correct: "A"
-  },
-  {
-    level: 2, category: "事件題 / What Event Happened?",
-    q: "English: What did John the Baptist say was coming near?\nChinese: 施洗約翰說什麼近了？",
-    a: "The kingdom of heaven / 天國", b: "The day of judgment / 審判的日子", c: "The great flood / 大洪水", d: "The end of the world / 世界末日",
-    correct: "A"
-  },
-  // LEVEL 3
-  {
-    level: 3, category: "事件題 / What Event Happened?",
-    q: "English: When Jesus was in the desert, fasting forty days and forty nights, what did the devil say to him?\nChinese: 耶穌在曠野禁食四十晝夜時，魔鬼對祂說了什麼？",
-    a: "Tell the stones to become bread. / 吩咐這些石頭變成食物。", b: "Use a miracle to make a feast appear. / 用神蹟變出宴席。", c: "You will die from starving. / 你會餓死。", d: "Bow to me, and you shall be fed. / 向我下拜，你就得吃。",
-    correct: "A"
-  },
-  {
-    level: 3, category: "應用題 / Application",
-    q: "English: When we decide to follow Jesus, what might happen in our life?\nChinese: 當我們決定跟隨耶穌，生活中可能會發生什麼？",
-    a: "It could involve dramatic changes. / 可能會帶來巨大的改變。", b: "We become super lucky and rich. / 我們會變得超級幸運和有錢。", c: "Everybody around you would love you. / 身邊所有人都會喜歡你。", d: "No changes would happen in your life. / 生命中不會有任何改變。",
-    correct: "A"
-  },
-  {
-    level: 3, category: "金句題 / Bible Verse",
-    q: "\"Repent, for the kingdom of heaven has come _____.\"\n「天國_____了，你們應當悔改！」",
-    a: "near / 近", b: "far / 遠", c: "now / 現在", d: "soon / 快",
-    correct: "A"
-  },
-  // LEVEL 4
-  {
-    level: 4, category: "何時, 何人? / When and Who?",
-    q: "English: Who came from the east to tempt Jesus in the wilderness?\nChinese: 誰從東方來到曠野試探耶穌？",
-    a: "The devil / 魔鬼", b: "A Pharisee / 一個法利賽人", c: "A Sadducee / 一個撒都該人", d: "A Roman soldier / 一個羅馬兵丁",
-    correct: "A"
-  },
-  {
-    level: 4, category: "金句題 / Bible Verse",
-    q: "Forgive as the _____ forgave you.\n主怎樣_____了你們，你們也要怎樣饒恕人。",
-    a: "Lord / 饒恕", b: "Moses / 摩西", c: "prophets / 先知", d: "angels / 天使",
-    correct: "A"
-  },
-  {
-    level: 4, category: "事件題 / What Event Happened?",
-    q: "English: After Jesus was baptized, what came down from heaven like a dove and rested on him?\nChinese: 耶穌受洗後，有什麼像鴿子從天降下，住在祂身上？",
-    a: "The Holy Spirit / 聖靈", b: "An angel / 一位天使", c: "A cloud of light / 光明的雲彩", d: "A voice from heaven / 從天來的聲音",
-    correct: "A"
-  },
-  // LEVEL 5
-  {
-    level: 5, category: "何時, 何人? / When and Who?",
-    q: "English: Jesus was walking beside the Sea of Galilee. Which two brothers did he see and ask to follow him, making them fishers of men?\nChinese: 耶穌在加利利海邊行走，看見哪兩兄弟，便叫他們跟從祂，要使他們作得人的漁夫？",
-    a: "Peter and Andrew / 彼得和安得烈", b: "James and John / 雅各和約翰", c: "Philip and Nathanael / 腓力和拿但業", d: "Matthew and Thomas / 馬太和多馬",
-    correct: "A"
-  },
-  {
-    level: 5, category: "金句題 / Bible Verse",
-    q: "\"_____ , for the kingdom of heaven has come near.\"\n「天國近了，你們應當 _____！」",
-    a: "Repent / 悔改", b: "judgment / 審判了", c: "blessing / 賜福了", d: "king / 君王來",
-    correct: "A"
-  },
-  {
-    level: 5, category: "應用題 / Application",
-    q: "English: John the Baptist told people to share their clothing and food. What does this teach us?\nChinese: 施洗約翰告訴人要分享衣服和食物。這教導了我們什麼？",
-    a: "We should help those in need. / 我們應當幫助有需要的人。", b: "Give only to your family. / 只給你的家人。", c: "Only rich people need to share. / 只有有錢人才需要分享。", d: "Sharing is not important. / 分享不重要。",
-    correct: "A"
-  },
-  // LEVEL 6
-  {
-    level: 6, category: "金句題 / Bible Verse",
-    q: "The Son of Man came to seek and to save the .\n人子來，為要尋找、拯救.",
-    a: "lost / 失喪的人", b: "sick / 生病的人", c: "rich / 富足的人", d: "righteous / 義人",
-    correct: "A"
-  },
-  {
-    level: 6, category: "何時, 何人? / When and Who?",
-    q: "English: When Jesus was tempted, the devil took him to a very high mountain. What did the devil show Jesus there?\nChinese: 耶穌受試探時，魔鬼帶祂上了一座最高的山。在那裡魔鬼把什麼指給耶穌看？",
-    a: "All the kingdoms of the world / 世上的萬國", b: "The holy city Jerusalem / 聖城耶路撒冷", c: "A great feast / 盛大的宴席", d: "A temple made of gold / 金造的聖殿",
-    correct: "A"
-  },
-  {
-    level: 6, category: "應用題 / Application",
-    q: "English: John the Baptist told people to produce fruit in keeping with repentance. What does this mean for us today?\nChinese: 施洗約翰告訴人要結出果子來與悔改的心相稱。這對今天的我們意味著什麼？",
-    a: "Our actions should show that we have truly turned from sin. / 我們的行為應當證明我們真正離開了罪。", b: "We must give away all our money. / 我們必須把所有的錢都捐出去。", c: "We need to go live in the wilderness. / 我們需要去曠野居住。", d: "We should be baptized every week. / 我們每週都應該受洗。",
-    correct: "A"
-  },
-  {
-    level: 6, category: "事件題 / What Event Happened?",
-    q: "English: When Jesus called Levi (Matthew) to follow him, where was Levi sitting?\nChinese: 耶穌呼召利未（馬太）跟隨祂的時候，利未正坐在哪裡？",
-    a: "At the tax collector's booth / 在稅關上", b: "In the synagogue / 在會堂裡", c: "By the seashore / 在海邊", d: "On a mountain / 在山上",
-    correct: "A"
-  },
-  // LEVEL 7
-  {
-    level: 7, category: "事件題 / What Event Happened?",
-    q: "English: When John the Baptist saw many Pharisees and Sadducees coming to his baptism, what did he call them?\nChinese: 施洗約翰看見許多法利賽人和撒都該人也來受洗，就稱他們為什麼？",
-    a: "A brood of vipers / 毒蛇的種類", b: "Whitewashed tombs / 粉飾的墳墓", c: "Blind guides / 瞎眼的領路者", d: "Hypocrites / 假冒為善的人",
-    correct: "A"
-  },
-  {
-    level: 7, category: "應用題 / Application",
-    q: "English: Jesus refused to bow to the devil even when offered all the kingdoms of the world. How can we apply this when we face temptation?\nChinese: 即使魔鬼把萬國的榮華都給耶穌，耶穌仍拒絕向魔鬼下拜。當我們面對試探時，如何應用這一點？",
-    a: "We should worship and serve God only, rejecting shortcuts to power or wealth. / 我們應當單單敬拜事奉神，拒絕通往權勢或財富的捷徑。", b: "We can compromise a little if the reward is big enough. / 如果好處夠大，可以稍微妥協一下。", c: "It's okay to give in if nobody sees it. / 如果沒人看見，妥協一下也沒關係。", d: "The devil's offers are always safe to accept. / 魔鬼的提議總是可以安全接受。",
-    correct: "A"
-  },
-  {
-    level: 7, category: "應用題 / Application",
-    q: "English: When Jesus ate with tax collectors and sinners, the Pharisees asked, \"Why does he eat with such people?\" What does this teach us?\nChinese: 當耶穌與稅吏和罪人一起吃飯時，法利賽人問：「祂為什麼和這樣的人吃飯？」這教導了我們什麼？",
-    a: "Jesus came to call sinners, not the righteous. We should welcome everyone to know Jesus. / 耶穌來本不是召義人，乃是召罪人。我們應當歡迎每一個人來認識耶穌。", b: "We should only eat with people who are good. / 我們只應該跟好人吃飯。", c: "Sinners are not welcome near Jesus. / 罪人不可以靠近耶穌。", d: "Jesus made a mistake eating with them. / 耶穌跟他們吃飯是錯誤的。",
-    correct: "A"
-  },
-  {
-    level: 7, category: "金句題 / Bible Verse",
-    q: "Love your _____ , do good to them.\n你們倒要愛_____，也要善待他們。",
-    a: "enemies / 仇敵", b: "neighbors / 鄰舍", c: "friends / 朋友", d: "family / 家人",
-    correct: "A"
-  },
-  // LEVEL 8
-  {
-    level: 8, category: "事件題 / What Event Happened?",
-    q: "English: During the temptation, the devil took Jesus to the holy city and set him on the highest point of the temple. What did the devil tell Jesus to do?\nChinese: 在試探中，魔鬼帶耶穌進了聖城，叫祂站在殿頂上。魔鬼叫耶穌做什麼？",
-    a: "Throw yourself down / 跳下去", b: "Call down fire / 叫火降下來", c: "Preach to the crowds / 向群眾講道", d: "Pray all night / 整夜禱告",
-    correct: "A"
-  },
-  {
-    level: 8, category: "金句題 / Bible Verse",
-    q: "Be kind and compassionate to one another, _____ each other, just as in Christ God forgave you.\n要以恩慈相待，存憐憫的心，彼此_____，正如神在基督裡饒恕了你們一樣。",
-    a: "forgiving / 饒恕", b: "loving / 相愛", c: "helping / 幫助", d: "teaching / 教導",
-    correct: "A"
-  },
-  {
-    level: 8, category: "何時, 何人? / When and Who?",
-    q: "English: John the Baptist said, \"I am the voice of one calling in the wilderness.\" In which wilderness did he preach?\nChinese: 施洗約翰說：「在曠野有人聲喊著說。」他在哪個曠野傳道？",
-    a: "The wilderness of Judea / 猶太的曠野", b: "The wilderness of Sinai / 西奈的曠野", c: "The wilderness of Paran / 巴蘭的曠野", d: "The wilderness of Zin / 尋的曠野",
-    correct: "A"
-  },
-  {
-    level: 8, category: "應用題 / Application",
-    q: "English: Jesus healed many people who were sick, oppressed by demons, and suffering. What does this show us about God's heart?\nChinese: 耶穌醫治了許多有病、被鬼附、受苦的人。這顯明了神的心意是什麼？",
-    a: "God has compassion and wants to heal and restore people. / 神有憐憫，想要醫治和恢復人。", b: "God only cares about spiritual things, not physical pain. / 神只關心屬靈的事，不關心身體的痛苦。", c: "God causes sickness to punish people. / 神降下疾病來懲罰人。", d: "God does not have power to heal. / 神沒有能力醫治。",
-    correct: "A"
-  },
-  // LEVEL 9
-  {
-    level: 9, category: "何時, 何人? / When and Who?",
-    q: "English: According to Luke 6, large crowds came to hear Jesus and be healed. Where did they come from?\nChinese: 根據路加福音第6章，許多人來聽耶穌講道並得醫治。他們從哪裡來？",
-    a: "Judea, Jerusalem, and the coast of Tyre and Sidon / 猶太、耶路撒冷、並推羅西頓的海邊", b: "Only from Galilee / 只從加利利來", c: "Only from Jerusalem / 只從耶路撒冷來", d: "From Egypt and Babylon / 從埃及和巴比倫來",
-    correct: "A"
-  },
-  {
-    level: 9, category: "應用題 / Application",
-    q: "English: When Jesus called Peter, Andrew, James, and John, they immediately left their nets and followed him. What does this teach us?\nChinese: 耶穌呼召彼得、安得烈、雅各、約翰時，他們立刻捨了網跟隨祂。這教導了我們什麼？",
-    a: "Following Jesus requires immediate obedience and sometimes sacrifice. / 跟隨耶穌需要立刻順服，有時需要犧牲。", b: "We should only follow Jesus if we have nothing better to do. / 只有沒事做的時候才跟隨耶穌。", c: "We must first become rich before following Jesus. / 必須先變得有錢才能跟隨耶穌。", d: "Following Jesus is easy and costs nothing. / 跟隨耶穌很容易，不需要付代價。",
-    correct: "A"
-  },
-  {
-    level: 9, category: "事件題 / What Event Happened?",
-    q: "English: What did John the Baptist say the One coming after him would baptize with?\nChinese: 施洗約翰說，在他以後來的那一位要用什麼施洗？",
-    a: "The Holy Spirit and fire / 聖靈與火", b: "Water and oil / 水與油", c: "Blood and water / 血與水", d: "Wind and rain / 風與雨",
-    correct: "A"
-  },
-  {
-    level: 9, category: "何時, 何人? / When and Who?",
-    q: "English: According to Luke 5, whose boat did Jesus get into to teach the crowds from the water?\nChinese: 根據路加福音第5章，耶穌上了誰的船，在船上教訓眾人？",
-    a: "Simon Peter's boat / 西門彼得的船", b: "James's boat / 雅各的船", c: "John's boat / 約翰的船", d: "Andrew's boat / 安得烈的船",
-    correct: "A"
-  },
-  {
-    level: 9, category: "金句題 / Bible Verse",
-    q: "Her many sins have been _____, as her great love has shown.\n她許多的罪已經_____了，證明她愛得多。",
-    a: "forgiven / 赦免", b: "counted / 數算", c: "hidden / 隱藏", d: "increased / 增加",
-    correct: "A"
-  },
-  // LEVEL 10
-  {
-    level: 10, category: "金句題 / Bible Verse",
-    q: "Jesus said, \"Father, _____ them, for they do not know what they are doing.\"\n耶穌說：「父啊，_____他們！因為他們所做的他們不曉得。」",
-    a: "forgive / 赦免", b: "judge / 審判", c: "teach / 教導", d: "leave / 離棄",
-    correct: "A"
-  },
-  // LEVEL 11
-  {
-    level: 11, category: "事件題 / What Event Happened?",
-    q: "English: After Jesus called Peter, Andrew, James, and John, what did they leave behind to follow him?\nChinese: 耶穌呼召彼得、安得烈、雅各、約翰之後，他們撇下了什麼來跟從祂？",
-    a: "Their nets and boat / 他們的網和船", b: "Their houses and land / 他們的房屋和田地", c: "Their father Zebedee alone / 只撇下父親西庇太", d: "Their tax collector booth / 他們的稅關",
-    correct: "A"
-  },
-  {
-    level: 11, category: "何時, 何人? / When and Who?",
-    q: "English: Jesus went throughout Galilee teaching in their synagogues. Which two things did he also do according to Matthew 4:23?\nChinese: 耶穌走遍加利利，在會堂裡教訓人。根據馬太福音4:23，祂還做了哪兩件事？",
-    a: "Preach the gospel and heal every disease / 傳天國的福音，醫治各樣病症", b: "Cast out demons and raise the dead / 趕鬼和叫死人復活", c: "Feed the hungry and clothe the naked / 餵飽飢餓者，給赤身者衣服", d: "Pray and fast / 禱告和禁食",
-    correct: "A"
-  },
-  {
-    level: 11, category: "金句題 / Bible Verse",
-    q: "The Word became _____ and made his dwelling among us, full of grace and truth.\n道成了_____，住在我們中間，充充滿滿地有恩典有真理。",
-    a: "flesh / 肉身", b: "spirit / 靈", c: "light / 光", d: "man / 人",
-    correct: "A"
-  },
-  // LEVEL 13
-  {
-    level: 13, category: "應用題 / Application",
-    q: "English: After the miraculous catch of fish, Peter said, \"Go away from me, Lord; I am a sinful man!\" What does this teach us about knowing Jesus?\nChinese: 在打魚的神蹟後，彼得說：「主啊，離開我，我是個罪人！」這教導了我們關於認識耶穌的什麼事？",
-    a: "When we truly see who Jesus is, we become aware of our own sinfulness. / 當我們真正看見耶穌是誰，我們會意識到自己的罪。", b: "We should stay away from Jesus because we are sinful. / 我們應該遠離耶穌，因為我們有罪。", c: "Only perfect people can follow Jesus. / 只有完美的人才能跟隨耶穌。", d: "Jesus is afraid of sinners. / 耶穌害怕罪人。",
-    correct: "A"
-  },
-  {
-    level: 13, category: "何時, 何人? / When and Who?",
-    q: "English: When Jesus called Peter, Andrew, James, and John, they were mending their nets. Where did this happen?\nChinese: 耶穌呼召彼得、安得烈、雅各、約翰時，他們正在補網。這事發生在哪裡？",
-    a: "By the Sea of Galilee / 在加利利海邊", b: "By the Jordan River / 在約旦河邊", c: "By the Dead Sea / 在死海邊", d: "By the Mediterranean Sea / 在地中海邊",
-    correct: "A"
-  },
-  {
-    level: 13, category: "事件題 / What Event Happened?",
-    q: "English: When Jesus was tempted to throw himself down from the temple, what Scripture did the devil quote?\nChinese: 當魔鬼試探耶穌從殿頂跳下去時，牠引用了哪段經文？",
-    a: "He will command his angels concerning you / 祂要為你吩咐祂的使者", b: "You shall not put the Lord to the test / 不可試探主你的神", c: "Man shall not live by bread alone / 人活著不是單靠食物", d: "Worship the Lord your God / 當拜主你的神",
-    correct: "A"
-  },
-  {
-    level: 13, category: "何時, 何人? / When and Who?",
-    q: "English: When Jesus called Levi (Matthew) to follow him, who was eating with Jesus at Levi's house?\nChinese: 耶穌呼召利未（馬太）跟隨祂之後，在利未家裡和誰一起吃飯？",
-    a: "Many tax collectors and sinners / 許多稅吏和罪人", b: "Pharisees and teachers of the law / 法利賽人和律法師", c: "Only the twelve disciples / 只有十二門徒", d: "Roman officials / 羅馬官員",
-    correct: "A"
-  },
-  // LEVEL 14
-  {
-    level: 14, category: "事件題 / What Event Happened?",
-    q: "English: After Jesus called Peter, what miraculous catch of fish happened?\nChinese: 耶穌呼召彼得之後，發生了什麼打魚的神蹟？",
-    a: "They caught so many fish their nets began to break / 他們圈住許多魚，網差點裂開", b: "They caught one large fish with a coin inside / 他們捕到一條大魚，裡面有錢幣", c: "They caught nothing all night / 他們整夜打不到魚", d: "The fish jumped into the boat / 魚自己跳進船裡",
-    correct: "A"
-  },
-  {
-    level: 14, category: "應用題 / Application",
-    q: "English: Jesus said, \"It is written: Worship the Lord your God and serve him only.\" How does this apply to modern life?\nChinese: 耶穌說：「經上記著說：當拜主你的神，單要事奉祂。」這如何應用在現代生活中？",
-    a: "We should not let money, fame, or success become more important than God. / 我們不應讓金錢、名聲或成功變得比神更重要。", b: "We only need to worship on Sundays. / 我們只需要在星期天敬拜。", c: "We can worship both God and other things. / 我們可以同時敬拜神和其他事物。", d: "God does not care what we worship. / 神不在乎我們敬拜什麼。",
-    correct: "A"
-  },
-  // LEVEL 15
-  {
-    level: 15, category: "應用題 / Application",
-    q: "English: Jesus went to be baptized by John even though he had no sin. Why is this important for us?\nChinese: 耶穌雖然沒有罪，卻去受約翰的洗。這對我們為什麼重要？",
-    a: "Jesus identified with us sinners to fulfill all righteousness, showing us an example of obedience. / 耶穌與我們罪人認同，盡諸般的義，給我們順服的榜樣。", b: "Jesus needed to wash away his own sins. / 耶穌需要洗去祂自己的罪。", c: "Jesus was trying to impress the crowd. / 耶穌想要吸引群眾注意。", d: "Jesus did not know who he was yet. / 耶穌當時還不知道自己是誰。",
-    correct: "A"
-  },
+  { level: 1, module: "Module 4 耶穌是誰 Who is Jesus?", category: "金句題 / Bible Verse", q: "God showed his love by sending his _____ into the world.\n神差他_____到世間來，顯明他的愛。", a: "only son / 獨生子", b: "Servant / 僕人", c: "Angel / 天使", d: "Prophet / 先知", correct: "A" },
+  { level: 5, module: "Module 4 耶穌是誰 Who is Jesus?", category: "金句題 / Bible Verse", q: "\"_____ , for the kingdom of heaven has come near.\"\n「天國近了，你們應當 _____！」", a: "Repent / 悔改", b: "judgment / 審判了", c: "blessing / 賜福了", d: "king / 君王來", correct: "A" },
+  { level: 11, module: "Module 4 耶穌是誰 Who is Jesus?", category: "金句題 / Bible Verse", q: "The Word became _____ and made his dwelling among us, full of grace and truth.\n道成了_____，住在我們中間，充充滿滿地有恩典有真理。", a: "flesh / 肉身", b: "spirit / 靈", c: "light / 光", d: "man / 人", correct: "A" },
+  { level: 2, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "金句題 / Bible Verse", q: "The Sovereign Lord says: \"I myself will search and find my .\"\n主耶和華說：『看哪，我必親自尋找我的，將牠們尋見。』", a: "sheep / 羊", b: "coins / 錢", c: "children / 兒女", d: "servants / 僕人", correct: "A" },
+  { level: 3, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "金句題 / Bible Verse", q: "\"Repent, for the kingdom of heaven has come _____.\"\n「天國_____了，你們應當悔改！」", a: "near / 近", b: "far / 遠", c: "now / 現在", d: "soon / 快", correct: "A" },
+  { level: 6, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "金句題 / Bible Verse", q: "The Son of Man came to seek and to save the _____.\n人子來，為要尋找、拯救_____.", a: "lost / 失喪的人", b: "sick / 生病的人", c: "rich / 富足的人", d: "righteous / 義人", correct: "A" },
+  { level: 7, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "金句題 / Bible Verse", q: "Love your , do good to them.\n你們倒要愛，也要善待他們。", a: "enemies / 仇敵", b: "neighbors / 鄰舍", c: "friends / 朋友", d: "family / 家人", correct: "A" },
+  { level: 10, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "金句題 / Bible Verse", q: "Jesus said, \"Father, _____ them, for they do not know what they are doing.\"\n耶穌說：「父啊，_____他們！因為他們所做的他們不曉得。」", a: "forgive / 赦免", b: "judge / 審判", c: "teach / 教導", d: "leave / 離棄", correct: "A" },
+  { level: 4, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "金句題 / Bible Verse", q: "_____  as the Lord _____ you.\n主怎樣_____了你們，你們也要怎樣_____人。", a: "Forgive(forgave) / 饒恕", b: "Love(loved) / 愛", c: "", d: "", correct: "A" },
+  { level: 9, module: "Module 7 我們如何寬恕 How do we forgive?", category: "金句題 / Bible Verse", q: "Her many sins have been _____, as her great love has shown.\n她許多的罪已經_____了，證明她愛得多。", a: "forgiven / 赦免", b: "counted / 數算", c: "hidden / 隱藏", d: "increased / 增加", correct: "A" },
+  { level: 8, module: "Module 7 我們如何寬恕 How do we forgive?", category: "金句題 / Bible Verse", q: "Be kind and compassionate to one another, _____ each other, just as in Christ God forgave you.\n要以恩慈相待，存憐憫的心，彼此_____，正如神在基督裡饒恕了你們一樣。", a: "forgiving / 饒恕", b: "loving / 相愛", c: "helping / 幫助", d: "teaching / 教導", correct: "A" },
+  { level: 3, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "When Jesus was in the desert, fasting forty days and forty nights, what did the devil say to him?\n耶穌在曠野禁食四十晝夜時，魔鬼對祂說了什麼？", a: "Tell the stones to become bread. / 吩咐這些石頭變成食物。", b: "Use a miracle to make a feast appear. / 用神蹟變出宴席。", c: "You will die from starving. / 你會餓死。", d: "Bow to me, and you shall be fed. / 向我下拜，你就得吃。", correct: "A" },
+  { level: 4, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "After Jesus was baptized, what came down from heaven like a dove and rested on him?\n耶穌受洗後，有什麼像鴿子從天降下，住在祂身上？", a: "The Holy Spirit / 聖靈", b: "An angel / 一位天使", c: "A cloud of light / 光明的雲彩", d: "A voice from heaven / 從天來的聲音", correct: "A" },
+  { level: 2, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "What did John the Baptist say was coming near?\n施洗約翰說什麼近了？", a: "The kingdom of heaven / 天國", b: "The day of judgment / 審判的日子", c: "The great flood / 大洪水", d: "The end of the world / 世界末日", correct: "A" },
+  { level: 6, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "When Jesus called Levi (Matthew) to follow him, where was Levi sitting?\n耶穌呼召利未（馬太）跟隨祂的時候，利未正坐在哪裡？", a: "At the tax collector's booth / 在稅關上", b: "In the synagogue / 在會堂裡", c: "By the seashore / 在海邊", d: "On a mountain / 在山上", correct: "A" },
+  { level: 8, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "During the temptation, the devil took Jesus to the holy city and set him on the highest point of the temple. What did the devil tell Jesus to do?\n在試探中，魔鬼帶耶穌進了聖城，叫祂站在殿頂上。魔鬼叫耶穌做什麼？", a: "Throw yourself down / 跳下去", b: "Call down fire / 叫火降下來", c: "Preach to the crowds / 向群眾講道", d: "Pray all night / 整夜禱告", correct: "A" },
+  { level: 9, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "What did John the Baptist say the One coming after him would baptize with?\n施洗約翰說，在他以後來的那一位要用什麼施洗？", a: "The Holy Spirit and fire / 聖靈與火", b: "Water and oil / 水與油", c: "Blood and water / 血與水", d: "Wind and rain / 風與雨", correct: "A" },
+  { level: 11, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "After Jesus called Peter, Andrew, James, and John, what did they leave behind to follow him?\n耶穌呼召彼得、安得烈、雅各、約翰之後，他們撇下了什麼來跟從祂？", a: "Their nets and boat / 他們的網和船", b: "Their houses and land / 他們的房屋和田地", c: "Their father Zebedee alone / 只撇下父親西庇太", d: "Their tax collector booth / 他們的稅關", correct: "A" },
+  { level: 13, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "When Jesus was tempted to throw himself down from the temple, what Scripture did the devil quote?\n當魔鬼試探耶穌從殿頂跳下去時，牠引用了哪段經文？", a: "He will command his angels concerning you / 祂要為你吩咐祂的使者", b: "You shall not put the Lord to the test / 不可試探主你的神", c: "Man shall not live by bread alone / 人活著不是單靠食物", d: "Worship the Lord your God / 當拜主你的神", correct: "A" },
+  { level: 14, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "After Jesus called Peter, what miraculous catch of fish happened?\n耶穌呼召彼得之後，發生了什麼打魚的神蹟？", a: "They caught so many fish their nets began to break / 他們圈住許多魚，網差點裂開", b: "They caught one large fish with a coin inside / 他們捕到一條大魚，裡面有錢幣", c: "They caught nothing all night / 他們整夜打不到魚", d: "The fish jumped into the boat / 魚自己跳進船裡", correct: "A" },
+  { level: 7, module: "Module 4 耶穌是誰 Who is Jesus?", category: "事件題 / What Event Happened? ", q: "When John the Baptist saw many Pharisees and Sadducees coming to his baptism, what did he call them?\n施洗約翰看見許多法利賽人和撒都該人也來受洗，就稱他們為什麼？", a: "A brood of vipers / 毒蛇的種類", b: "Whitewashed tombs / 粉飾的墳墓", c: "Blind guides / 瞎眼的領路者", d: "Hypocrites / 假冒為善的人", correct: "A" },
+  { level: 5, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "Jesus was walking beside the Sea of Galilee. Which two brothers did he see and ask to follow him, making them fishers of men?\n耶穌在加利利海邊行走，看見哪兩兄弟，便叫他們跟從祂，要使他們作得人的漁夫？", a: "Peter and Andrew / 彼得和安得烈", b: "James and John / 雅各和約翰", c: "Philip and Nathanael / 腓力和拿但業", d: "Matthew and Thomas / 馬太和多馬", correct: "A" },
+  { level: 1, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "After Jesus was baptized, a voice from heaven said, \"This is my Son, whom I love.\" Who spoke that voice?\n耶穌受洗後，有聲音說：「這是我的愛子。」那聲音是誰的？", a: "God the Father / 父神", b: "An archangel / 一位天使長", c: "Moses and Elijah / 摩西和以利亞", d: "John the Baptist / 施洗約翰", correct: "A" },
+  { level: 8, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "John the Baptist said, \"I am the voice of one calling in the wilderness.\" In which wilderness did he preach?\n施洗約翰說：「在曠野有人聲喊著說。」他在哪個曠野傳道？", a: "The wilderness of Judea / 猶太的曠野", b: "The wilderness of Sinai / 西奈的曠野", c: "The wilderness of Paran / 巴蘭的曠野", d: "The wilderness of Zin / 尋的曠野", correct: "A" },
+  { level: 6, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "When Jesus was tempted, the devil took him to a very high mountain. What did the devil show Jesus there?\n耶穌受試探時，魔鬼帶祂上了一座最高的山。在那裡魔鬼把什麼指給耶穌看？", a: "All the kingdoms of the world / 世上的萬國", b: "The holy city Jerusalem / 聖城耶路撒冷", c: "A great feast / 盛大的宴席", d: "A temple made of gold / 金造的聖殿", correct: "A" },
+  { level: 9, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "According to Luke 5, whose boat did Jesus get into to teach the crowds from the water?\n根據路加福音第5章，耶穌上了誰的船，在船上教訓眾人？", a: "Simon Peter's boat / 西門彼得的船", b: "James's boat / 雅各的船", c: "John's boat / 約翰的船", d: "Andrew's boat / 安得烈的船", correct: "A" },
+  { level: 11, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "Jesus went throughout Galilee teaching in their synagogues. Which two things did he also do according to Matthew 4:23?\n根據馬太福音4:23，耶穌走遍加利利，在會堂裡教訓人，祂還做了哪兩件事？", a: "Preach the gospel and heal every disease / 傳天國的福音，醫治各樣病症", b: "Cast out demons and raise the dead / 趕鬼和叫死人復活", c: "Feed the hungry and clothe the naked / 餵飽飢餓者，給赤身者衣服", d: "Pray and fast / 禱告和禁食", correct: "A" },
+  { level: 13, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "When Jesus called Peter, Andrew, James, and John, they were mending their nets. Where did this happen?\n耶穌呼召彼得、安得烈、雅各、約翰時，他們正在補網。這事發生在哪裡？", a: "By the Sea of Galilee / 在加利利海邊", b: "By the Jordan River / 在約旦河邊", c: "By the Dead Sea / 在死海邊", d: "By the Mediterranean Sea / 在地中海邊", correct: "A" },
+  { level: 4, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "Who came from the east to tempt Jesus in the wilderness?\n誰從東方來到曠野試探耶穌？", a: "The devil / 魔鬼", b: "A Pharisee / 一個法利賽人", c: "A Sadducee / 一個撒都該人", d: "A Roman soldier / 一個羅馬兵丁", correct: "A" },
+  { level: 9, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "According to Luke 6, large crowds came to hear Jesus and be healed. Where did they come from?\n根據路加福音第6章，許多人來聽耶穌講道並得醫治。他們從哪裡來？", a: "Judea, Jerusalem, and the coast of Tyre and Sidon / 猶太、耶路撒冷、並推羅西頓的海邊", b: "Only from Galilee / 只從加利利來", c: "Only from Jerusalem / 只從耶路撒冷來", d: "From Egypt and Babylon / 從埃及和巴比倫來", correct: "A" },
+  { level: 13, module: "Module 4 耶穌是誰 Who is Jesus?", category: "何時, 何人? / When and Who?", q: "When Jesus called Levi (Matthew) to follow him, who was eating with Jesus at Levi's house?\n耶穌呼召利未（馬太）跟隨祂之後，在利未家裡和誰一起吃飯？", a: "Many tax collectors and sinners / 許多稅吏和罪人", b: "Pharisees and teachers of the law / 法利賽人和律法師", c: "Only the twelve disciples / 只有十二門徒", d: "Roman officials / 羅馬官員", correct: "A" },
+  { level: 3, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "When we decide to follow Jesus, what might happen in our life?\n當我們決定跟隨耶穌，生活中可能會發生什麼？", a: "It could involve dramatic changes. / 可能會帶來巨大的改變。", b: "We become super lucky and rich. / 我們會變得超級幸運和有錢。", c: "Everybody around you would love you. / 身邊所有人都會喜歡你。", d: "No changes would happen in your life. / 生命中不會有任何改變。", correct: "A" },
+  { level: 5, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "John the Baptist told people to share their clothing and food. What does this teach us?\n施洗約翰告訴人要分享衣服和食物。這教導了我們什麼？", a: "We should help those in need. / 我們應當幫助有需要的人。", b: "Give only to your family. / 只給你的家人。", c: "Only rich people need to share. / 只有有錢人才需要分享。", d: "Sharing is not important. / 分享不重要。", correct: "A" },
+  { level: 6, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "John the Baptist told people to produce fruit in keeping with repentance. What does this mean for us today?\n施洗約翰告訴人要結出果子來與悔改的心相稱。這對今天的我們意味著什麼？", a: "Our actions should show that we have truly turned from sin. / 我們的行為應當證明我們真正離開了罪。", b: "We must give away all our money. / 我們必須把所有的錢都捐出去。", c: "We need to go live in the wilderness. / 我們需要去曠野居住。", d: "We should be baptized every week. / 我們每週都應該受洗。", correct: "A" },
+  { level: 9, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "When Jesus called Peter, Andrew, James, and John, they immediately left their nets and followed him. What does this teach us?\n耶穌呼召彼得、安得烈、雅各、約翰時，他們立刻捨了網跟隨祂。這教導了我們什麼？", a: "Following Jesus requires immediate obedience and sometimes sacrifice. / 跟隨耶穌需要立刻順服，有時需要犧牲。", b: "We should only follow Jesus if we have nothing better to do. / 只有沒事做的時候才跟隨耶穌。", c: "We must first become rich before following Jesus. / 必須先變得有錢才能跟隨耶穌。", d: "Following Jesus is easy and costs nothing. / 跟隨耶穌很容易，不需要付代價。", correct: "A" },
+  { level: 7, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "Jesus refused to bow to the devil even when offered all the kingdoms of the world. How can we apply this when we face temptation?\n即使魔鬼把萬國的榮華都給耶穌，耶穌仍拒絕向魔鬼下拜。當我們面對試探時，如何應用這一點？", a: "We should worship and serve God only, rejecting shortcuts to power or wealth. / 我們應當單單敬拜事奉神，拒絕通往權勢或財富的捷徑。", b: "We can compromise a little if the reward is big enough. / 如果好處夠大，可以稍微妥協一下。", c: "It's okay to give in if nobody sees it. / 如果沒人看見，妥協一下也沒關係。", d: "The devil's offers are always safe to accept. / 魔鬼的提議總是可以安全接受。", correct: "A" },
+  { level: 15, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "Jesus went to be baptized by John even though he had no sin. Why is this important for us?\n耶穌雖然沒有罪，卻去受約翰的洗。這對我們為什麼重要？", a: "Jesus identified with us sinners to fulfill all righteousness, showing us an example of obedience. / 耶穌與我們罪人認同，盡諸般的義，給我們順服的榜樣。", b: "Jesus needed to wash away his own sins. / 耶穌需要洗去祂自己的罪。", c: "Jesus was trying to impress the crowd. / 耶穌想要吸引群眾注意。", d: "Jesus did not know who he was yet. / 耶穌當時還不知道自己是誰。", correct: "A" },
+  { level: 13, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "After the miraculous catch of fish, Peter said, \"Go away from me, Lord; I am a sinful man!\" What does this teach us about knowing Jesus?\n在打魚的神蹟後，彼得說：「主啊，離開我，我是個罪人！」這教導了我們關於認識耶穌的什麼事？", a: "When we truly see who Jesus is, we become aware of our own sinfulness. / 當我們真正看見耶穌是誰，我們會意識到自己的罪。", b: "We should stay away from Jesus because we are sinful. / 我們應該遠離耶穌，因為我們有罪。", c: "Only perfect people can follow Jesus. / 只有完美的人才能跟隨耶穌。", d: "Jesus is afraid of sinners. / 耶穌害怕罪人。", correct: "A" },
+  { level: 14, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "Jesus said, \"It is written: Worship the Lord your God and serve him only.\" How does this apply to modern life?\n耶穌說：「經上記著說：當拜主你的神，單要事奉祂。」這如何應用在現代生活中？", a: "We should not let money, fame, or success become more important than God. / 我們不應讓金錢、名聲或成功變得比神更重要。", b: "We only need to worship on Sundays. / 我們只需要在星期天敬拜。", c: "We can worship both God and other things. / 我們可以同時敬拜神和其他事物。", d: "God does not care what we worship. / 神不在乎我們敬拜什麼。", correct: "A" },
+  { level: 8, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "Jesus healed many people who were sick, oppressed by demons, and suffering. What does this show us about God's heart?\n耶穌醫治了許多有病、被鬼附、受苦的人。這顯明了神的心意是什麼？", a: "God has compassion and wants to heal and restore people. / 神有憐憫，想要醫治和恢復人。", b: "God only cares about spiritual things, not physical pain. / 神只關心屬靈的事，不關心身體的痛苦。", c: "God causes sickness to punish people. / 神降下疾病來懲罰人。", d: "God does not have power to heal. / 神沒有能力醫治。", correct: "A" },
+  { level: 7, module: "Module 4 耶穌是誰 Who is Jesus?", category: "應用題 / Application", q: "When Jesus ate with tax collectors and sinners, the Pharisees asked, \"Why does he eat with such people?\" What does this teach us?\n當耶穌與稅吏和罪人一起吃飯時，法利賽人問：「祂為什麼和這樣的人吃飯？」這教導了我們什麼？", a: "Jesus came to call sinners, not the righteous. We should welcome everyone to know Jesus. / 耶穌來本不是召義人，乃是召罪人。我們應當歡迎每一個人來認識耶穌。", b: "We should only eat with people who are good. / 我們只應該跟好人吃飯。", c: "Sinners are not welcome near Jesus. / 罪人不可以靠近耶穌。", d: "Jesus made a mistake eating with them. / 耶穌跟他們吃飯是錯誤的。", correct: "A" },
+  { level: 2, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "Jesus told a parable about a shepherd who had 100 sheep. One went missing. What did the shepherd do?\n耶穌講了一個比喻，一個牧人有100隻羊，走失了一隻。牧人怎麼做？", a: "He left the 99 to look for the one lost sheep. / 他撇下99隻，去尋找那隻迷失的羊。", b: "He waited for the lost sheep to come back. / 他等著迷羊自己回來。", c: "He killed the 99 because they were not lost. / 他殺了那99隻，因為牠們沒迷失。", d: "He bought a new sheep instead. / 他買了一隻新羊代替。", correct: "A" },
+  { level: 11, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "In the parable of the prodigal son, what did the younger son ask his father for?\n在浪子的比喻中，小兒子向父親要了什麼？", a: "His share of the inheritance. / 他應得的家產。", b: "A new pair of shoes. / 一雙新鞋。", c: "Permission to travel. / 出門旅行的許可。", d: "A pet animal. / 一隻寵物。", correct: "A" },
+  { level: 4, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "When Jesus saw Zacchaeus, where was he?\n耶穌看見撒該的時候，他在哪裡？", a: "In a sycamore-fig tree. / 在桑樹上。", b: "At the temple. / 在聖殿裡。", c: "By the sea. / 在海邊。", d: "On a mountain. / 在山上。", correct: "A" },
+  { level: 6, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "When Jesus met the man from Gerasa (Gadarenes), what was wrong with him?\n耶穌遇見格拉森那個人的時候，他怎麼了？", a: "He was possessed by many demons called Legion. / 他被許多鬼附著，名叫「群」。", b: "He was blind and lame. / 他是瞎眼瘸腿的。", c: "He had leprosy. / 他長了大痲瘋。", d: "He was paralyzed. / 他癱瘓了。", correct: "A" },
+  { level: 9, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "Jesus talked to a Samaritan woman at a well. What did He ask her for?\n耶穌在井邊和一個撒瑪利亞婦人說話。祂向她要什麼？", a: "A drink of water. / 水喝。", b: "Food to eat. / 食物吃。", c: "A place to sleep. / 睡覺的地方。", d: "Directions to the city. / 進城的方向。", correct: "A" },
+  { level: 10, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "In the prodigal son story, when the younger son came back home, what did the father do first?\n在浪子的故事中，小兒子回家時，父親首先做什麼？", a: "Ran to him, hugged him, and kissed him. / 跑去抱著他，連連親他。", b: "Asked him to pay back the money. / 叫他把錢還回來。", c: "Locked him outside. / 把他鎖在門外。", d: "Sent him to work in the field. / 打發他去田裡工作。", correct: "A" },
+  { level: 11, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "After Jesus healed the Gerasene demoniac, what did the healed man want to do?\n耶穌醫好格拉森被鬼附的人之後，那被醫好的人想做什麼？", a: "To go with Jesus. / 跟耶穌在一起。", b: "To return to the city alone. / 獨自回城裡去。", c: "To become a tax collector. / 去當稅吏。", d: "To build a temple. / 建造一座聖殿。", correct: "A" },
+  { level: 13, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "Jesus told the Samaritan woman, \"Everyone who drinks this water will be thirsty again. But whoever drinks the water I give them will never thirst.\" What did He mean?\n耶穌告訴撒瑪利亞婦人：「凡喝這水的還要再渴，人若喝我所賜的水就永遠不渴。」祂是什麼意思？", a: "He gives eternal life and spiritual satisfaction. / 祂賜下永生和心靈的滿足。", b: "His water is magic and never runs out. / 祂的水有魔法，永遠喝不完。", c: "She should buy water from Him. / 她應當向祂買水。", d: "He was talking about a new well. / 祂在講一口新井。", correct: "A" },
+  { level: 14, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "When the older brother in the prodigal son parable heard music and dancing, why was he angry?\n在浪子的比喻中，大兒子聽見作樂跳舞的聲音，為什麼生氣？", a: "He felt unfair that his younger brother was celebrated after wasting everything. / 他覺得弟弟浪費了一切卻被慶祝，不公平。", b: "He wanted to have a party for himself. / 他想為自己開派對。", c: "He hated music. / 他討厭音樂。", d: "He thought the food was bad. / 他覺得食物不好吃。", correct: "A" },
+  { level: 6, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "事件題 / What Event Happened? ", q: "What happened to the demons that came out of the Gerasene man?\n從格拉森那人身上出來的鬼，後來怎麼樣了？", a: "They went into a herd of pigs. / 牠們進到一群豬裡面。", b: "They went into the lake. / 牠們進到湖裡。", c: "They flew away. / 牠們飛走了。", d: "They went back into the man. / 牠們回到那人身上。", correct: "A" },
+  { level: 1, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "Who climbed a sycamore-fig tree to see Jesus?\n誰爬上了桑樹，為了要看耶穌？", a: "Zacchaeus / 撒該", b: "Peter / 彼得", c: "The Samaritan woman / 撒瑪利亞婦人", d: "The prodigal son / 浪子", correct: "A" },
+  { level: 3, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "Where did Jesus meet the Samaritan woman?\n耶穌在哪裡遇見了撒瑪利亞婦人？", a: "At Jacob's well / 在雅各井旁", b: "At the temple / 在聖殿裡", c: "In the synagogue / 在會堂裡", d: "On the seashore / 在海邊", correct: "A" },
+  { level: 5, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "In the parable of the lost sheep, who did the shepherd represent?\n在迷失的羊的比喻中，牧羊人代表誰？", a: "God / Jesus seeking the lost / 神 / 尋找失喪者的耶穌", b: "The Pharisee / 法利賽人", c: "The sinner / 罪人", d: "The angel / 天使", correct: "A" },
+  { level: 7, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "Where did the younger son in the prodigal parable go after leaving his father?\n浪子比喻中的小兒子離開父親後去了哪裡？", a: "A distant country / 遠方", b: "A nearby village / 附近的村子", c: "Jerusalem / 耶路撒冷", d: "The wilderness / 曠野", correct: "A" },
+  { level: 9, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "After Jesus healed the Gerasene demoniac, where did he tell the man to go?\n耶穌醫好格拉森被鬼附的人之後，叫那人去哪裡？", a: "To his own home and tell what God had done / 回自己的家，傳說神為他做了何等大的事", b: "To Jerusalem to offer a sacrifice / 去耶路撒冷獻祭", c: "To follow the 12 disciples / 跟隨十二門徒", d: "To the temple to be a priest / 去聖殿當祭司", correct: "A" },
+  { level: 12, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "The Samaritan woman said, \"Our ancestors worshiped on this ____.\" Which place did she mean?\n撒瑪利亞婦人說：「我們的祖宗在這____禮拜。」她指的是哪地方？", a: "Mountain / 山上", b: "City / 城內", c: "Well / 井邊", d: "Desert / 沙漠", correct: "A" },
+  { level: 2, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "In the parable of the lost sheep, how many sheep did the shepherd have in total?\n在迷失的羊的比喻中，牧羊人總共有多少隻羊？", a: "100 / 一百隻", b: "50 / 五十隻", c: "10 / 十隻", d: "7 / 七隻", correct: "A" },
+  { level: 6, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "Who lived in the region of the Gerasenes (Gadarenes)?\n誰住在格拉森（加大拉）人的地方？", a: "A man with an unclean spirit / 一個被污鬼附著的人", b: "A rich tax collector / 一個富有的稅吏", c: "A Samaritan woman / 一個撒瑪利亞婦人", d: "A prodigal son / 一個浪子", correct: "A" },
+  { level: 7, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "何時, 何人? / When and Who?", q: "After the Samaritan woman met Jesus, whom did she go to tell?\n撒瑪利亞婦人遇見耶穌之後，去告訴了誰？", a: "The people in her town / 城裡的人", b: "The priests / 祭司", c: "The Roman governor / 羅馬巡撫", d: "The Pharisees / 法利賽人", correct: "A" },
+  { level: 4, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "What does the parable of the lost sheep teach us about God?\n迷失的羊的比喻教導我們神是怎樣的？", a: "God searches for every lost person. / 神尋找每一個失喪的人。", b: "God only cares about people who are good. / 神只關心好人。", c: "God gives up on lost people. / 神放棄失喪的人。", d: "God waits for lost people to come on their own. / 神等著失喪的人自己來。", correct: "A" },
+  { level: 5, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "In the prodigal son story, when the younger son returned, the father forgave him. What should we do when someone says sorry to us?\n在浪子的故事中，小兒子回家時，父親饒恕了他。當有人向我們道歉時，我們應當怎麼做？", a: "Forgive them like the father forgave. / 像父親饒恕一樣饒恕他們。", b: "Make them pay first. / 先叫他們賠償。", c: "Never trust them again. / 再也不信任他們。", d: "Yell at them. / 向他們大吼。", correct: "A" },
+  { level: 4, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "Jesus went to Zacchaeus’s house even though people complained. What does this show?\n雖然有人抱怨，耶穌還是去了撒該的家。這說明了什麼？", a: "Jesus loves and seeks everyone, even those others reject. / 耶穌愛並尋找每一個人，甚至是被別人拒絕的人。", b: "Jesus only visits rich people. / 耶穌只拜訪有錢人。", c: "Jesus doesn't care about sinners. / 耶穌不在乎罪人。", d: "Jesus was afraid of the crowd. / 耶穌害怕群眾。", correct: "A" },
+  { level: 6, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "The Gerasene man was healed and wanted to follow Jesus, but Jesus told him to go home and tell his family. What does this teach us?\n格拉森那人被醫好後想要跟隨耶穌，但耶穌叫他回家告訴家人。這教導了我們什麼？", a: "We can share what Jesus has done for us right where we are. / 我們可以在自己所在的地方分享耶穌為我們做的事。", b: "We must travel far away to serve God. / 我們必須去遠方服事神。", c: "Only disciples can share about Jesus. / 只有門徒才能分享耶穌。", d: "Family is not important. / 家庭不重要。", correct: "A" },
+  { level: 7, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "The Samaritan woman had a hard past, but Jesus still talked to her. What does this mean for us?\n撒瑪利亞婦人有不好的過去，但耶穌仍然和她說話。這對我們意味著什麼？", a: "No one is too sinful for Jesus to seek and save. / 沒有人罪大到耶穌不願意尋找和拯救。", b: "Only good people can come to Jesus. / 只有好人才可以到耶穌那裡。", c: "Jesus only likes perfect people. / 耶穌只喜歡完美的人。", d: "Our past mistakes make Jesus reject us. / 我們過去的錯誤會讓耶穌拒絕我們。", correct: "A" },
+  { level: 9, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "The older brother in the prodigal son story refused to join the celebration. What warning does this give us?\n浪子比喻中的大兒子不肯進去參加慶祝。這給我們什麼警告？", a: "We should not be self-righteous or unforgiving toward repentant sinners. / 我們不應自以為義或不饒恕悔改的罪人。", b: "We should always stay angry at our siblings. / 我們應當總是對兄弟姊妹生氣。", c: "Celebrations are bad. / 慶祝是不好的。", d: "The older son was right to be angry. / 大兒子生氣是對的。", correct: "A" },
+  { level: 10, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "After meeting Jesus, Zacchaeus said he would give half his possessions to the poor and pay back four times if he cheated anyone. What does this show about true salvation?\n撒該遇見耶穌後說，要把家產的一半分給窮人，如果訛詐了誰，就還四倍。這說明了真正的得救是什麼樣的？", a: "Real change in heart leads to changed actions, including restitution. / 真正的內心改變會帶來行動的改變，包括賠償。", b: "Salvation only requires believing, not action. / 得救只需要相信，不需要行動。", c: "Giving money away is not necessary. / 捐錢是不必要的。", d: "Only poor people need to repent. / 只有窮人才需要悔改。", correct: "A" },
+  { level: 12, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "Jesus said, \"I was sent only to the lost sheep of Israel,\" yet He helped the Samaritan woman and the Gerasene man. What does this teach about God's heart?\n耶穌說：「我奉差遣不過是到以色列家迷失的羊那裡去。」但祂卻幫助了撒瑪利亞婦人和格拉森人。這教導我們神的心意是什麼？", a: "God's love eventually reaches all people, even outsiders. / 神的愛最終會臨到所有的人，甚至是外人。", b: "God only cares about one group of people. / 神只關心一類人。", c: "Jesus changed His mind randomly. / 耶穌隨便改變主意。", d: "Outsiders should not be helped. / 外人不應該被幫助。", correct: "A" },
+  { level: 8, module: "Module 5 尋找人的耶穌 Jesus Who Searches for Us", category: "應用題 / Application", q: "The father in the prodigal son story said, \"We had to celebrate and be glad, because this brother of yours was dead and is alive again.\" What does this picture about God?\n浪子比喻中的父親說：「我們理當歡喜快樂，因為你這個兄弟是死而復活，失而又得的。」這描繪了神怎樣的性情？", a: "God rejoices greatly when a sinner repents. / 當一個罪人悔改時，神大大喜樂。", b: "God only rejoices over perfect people. / 神只為完美的人喜樂。", c: "God is sad when sinners come back. / 罪人回來時神很難過。", d: "God does not care about repentance. / 神不在乎悔改。", correct: "A" },
+  { level: 4, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "When Jesus was on the cross, He said, \"Father, forgive them, for they do not know what they are doing.\" Who was He forgiving?\n耶穌在十字架上說：「父啊，赦免他們，因為他們所做的他們不曉得。」祂在赦免誰？", a: "The soldiers and people who crucified Him / 釘祂十字架的兵丁和人們", b: "Only His disciples / 只有祂的門徒", c: "The Pharisees only / 只有法利賽人", d: "Himself / 祂自己", correct: "A" },
+  { level: 2, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "Jesus told a parable about a king who forgave a servant a huge debt. Later, that servant refused to forgive a small debt. What did the king do?\n耶穌講了一個比喻，一個王免了僕人一筆巨債。後來那僕人不肯免別人的小債。王怎麼做？", a: "He threw the unforgiving servant into prison. / 他把那不饒恕人的僕人下在監裡。", b: "He gave him more money. / 他給了那僕人更多錢。", c: "He ordered soldiers to beat him up. / 他命令士兵打那僕人一身。", d: "He ignored what the servant did. / 他無視僕人的行為。", correct: "A" },
+  { level: 3, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "On the night He was betrayed, Jesus took bread and said, \"This is my body.\" He then took a cup and said, \"This is my blood.\" What event was this?\n在祂被賣的那一夜，耶穌拿起餅來說：「這是我的身體。」又拿起杯來說：「這是我的血。」這是什麼事件？", a: "The Last Supper / 最後的晚餐", b: "A wedding feast / 婚宴", c: "A birthday party / 生日派對", d: "A harvest celebration / 豐收慶典", correct: "A" },
+  { level: 6, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "Jesus said, \"Love your enemies, do good to those who hate you.\" What reward does He promise for doing this?\n耶穌說：「要愛仇敵，善待恨你們的人。」這樣做有什麼應許的賞賜？", a: "You will be children of the Most High. / 你們必作至高者的兒子。", b: "You will become rich. / 你會變成有錢人。", c: "You will never have problems. / 你永遠不會有麻煩。", d: "Everyone will praise you. / 所有人都會稱讚你。", correct: "A" },
+  { level: 7, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "After Jesus rose from the dead, who did He appear to first according to Mark 16?\n耶穌從死裡復活後，根據馬可福音第16章，祂首先向誰顯現？", a: "Mary Magdalene / 抹大拉的馬利亞", b: "Peter / 彼得", c: "Thomas / 多馬", d: "The Roman governor / 羅馬巡撫", correct: "A" },
+  { level: 8, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "During the Last Supper, Jesus got up from the table, wrapped a towel around His waist, and poured water into a basin. What did He do next?\n在最後的晚餐時，耶穌離席站起來，拿一條手巾束腰，隨後把水倒在盆裡。祂接下來做了什麼？", a: "He began to wash the disciples' feet. / 祂洗門徒的腳。", b: "He broke bread. / 祂擘餅。", c: "He prayed alone. / 祂獨自禱告。", d: "He left the room. / 祂離開了房間。", correct: "A" },
+  { level: 10, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "Peter denied Jesus three times. What happened immediately after the third denial?\n彼得三次否認耶穌。第三次否認後，立刻發生了什麼事？", a: "The rooster crowed, and Peter wept bitterly. / 雞就叫了，彼得出去痛哭。", b: "Jesus appeared and forgave him. / 耶穌顯現並赦免他。", c: "Peter ran to the tomb. / 彼得跑到墳墓那裡。", d: "An angel spoke to Peter. / 有天使對彼得說話。", correct: "A" },
+  { level: 14, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "When Jesus died on the cross, what supernatural sign happened according to Matthew 27?\n耶穌在十字架上斷氣時，根據馬太福音第27章，發生了什麼超自然的徵兆？", a: "The temple curtain tore in two from top to bottom. / 聖殿的幔子從上到下裂為兩半。", b: "The sun turned bright red. / 太陽變成鮮紅色。", c: "Thunder and lightning struck the cross. / 雷電擊打十字架。", d: "The ground turned to gold. / 地面變成了黃金。", correct: "A" },
+  { level: 15, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "In the parable of the unforgiving servant, how much did the first servant owe the king?\n在不饒恕人的惡僕比喻中，第一個僕人欠了王多少錢？", a: "Ten thousand bags of gold (a fortune impossible to repay) / 六千萬銀幣（無法償還的巨款）", b: "One hundred silver coins / 一百銀幣", c: "One gold coin / 一個金幣", d: "Ten silver coins / 十個銀幣", correct: "A" },
+  { level: 7, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "事件題 / What Event Happened? ", q: "When Jesus washed Peter's feet, Peter first refused. What did Jesus say?\n耶穌為彼得洗腳時，彼得起先不肯。耶穌說了什麼？", a: "Unless I wash you, you have no part with me. / 我若不洗你，你就與我無分了。", b: "Then I will not eat with you. / 那我就不與你同吃。", c: "You are too proud. / 你太驕傲了。", d: "Go away from me. / 離開我去吧。", correct: "A" },
+  { level: 4, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "Who denied knowing Jesus three times?\n誰三次否認認識耶穌？", a: "Peter / 彼得", b: "Judas / 猶大", c: "Thomas / 多馬", d: "John / 約翰", correct: "A" },
+  { level: 2, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "Where was Jesus crucified?\n耶穌在哪裡被釘十字架？", a: "Golgotha (the Place of the Skull) / 各各他（髑髏地）", b: "The Garden of Gethsemane / 客西馬尼園", c: "The Mount of Olives / 橄欖山", d: "The temple courtyard / 聖殿院子", correct: "A" },
+  { level: 8, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "At the Last Supper, which disciple was sitting next to Jesus and leaned back on His chest to ask Him a question?\n在最後的晚餐時，哪個門徒挨近耶穌的胸膛，問祂一個問題？", a: "The disciple whom Jesus loved (John) / 耶穌所愛的那門徒（約翰）", b: "Peter / 彼得", c: "Judas / 猶大", d: "James / 雅各", correct: "A" },
+  { level: 8, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "According to Matthew 27, while Jesus was on the cross, the soldiers did what with His clothes?\n根據馬太福音第27章，耶穌在十字架上時，兵丁怎樣處理祂的衣服？", a: "They divided them by casting lots. / 他們拈鬮分了祂的衣服。", b: "They burned them. / 他們燒了衣服。", c: "They gave them to Mary. / 他們把衣服給了馬利亞。", d: "They kept them as relics. / 他們留作紀念品。", correct: "A" },
+  { level: 7, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "After Jesus rose from the dead, the women went to the tomb. Who did they see there?\n耶穌復活後，婦女們來到墳墓那裡。她們在那裡看見了誰？", a: "An angel of the Lord / 主的一位天使", b: "Jesus already gone / 耶穌已經走了", c: "The Roman guards / 羅馬兵丁", d: "The Pharisees / 法利賽人", correct: "A" },
+  { level: 10, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "When Jesus washed the disciples' feet, who had already decided to betray Him?\n耶穌為門徒洗腳時，誰已經決心要去出賣祂了？", a: "Judas Iscariot / 加略人猶大", b: "Peter / 彼得", c: "Andrew / 安得烈", d: "Philip / 腓力", correct: "A" },
+  { level: 8, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "何時, 何人? / When and Who?", q: "Who asked Jesus, \"Lord, how many times shall I forgive my brother when he sins against me? Up to seven times?\"\n誰問耶穌：「主啊，我弟兄得罪我，我當饒恕他幾次呢？到七次可以嗎？」", a: "Peter / 彼得", b: "John / 約翰", c: "James / 雅各", d: "Matthew / 馬太", correct: "A" },
+  { level: 4, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "Jesus forgave the people who crucified Him. What does this teach us?\n耶穌饒恕了釘祂十字架的人。這教導了我們什麼？", a: "We should forgive even those who hurt us badly. / 我們應當饒恕即使傷害我們很深的人。", b: "We only forgive people who say sorry first. / 我們只饒恕先道歉的人。", c: "Forgiveness is not important. / 饒恕不重要。", d: "Only Jesus can forgive; we don't have the power. / 只有耶穌能饒恕，我們沒有這能力。", correct: "A" },
+  { level: 1, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "Jesus said, \"Love your enemies.\" How can we do this?\n耶穌說：「愛你們的仇敵。」我們可以怎樣做？", a: "Pray for them and do good to them. / 為他們禱告，善待他們。", b: "Ignore them completely. / 完全不理他們。", c: "Fight back when they hurt us. / 他們傷害我們時就反擊。", d: "Pretend they don't exist. / 假裝他們不存在。", correct: "A" },
+  { level: 3, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "Jesus washed the disciples' feet. What attitude should we have toward others?\n耶穌洗門徒的腳。我們對別人應該有什麼態度？", a: "A servant's heart to humbly serve others. / 謙卑服事別人的僕人心態。", b: "We should always be the boss. / 我們應當總是作主人。", c: "Only important people should serve. / 只有重要的人才要服事。", d: "Serving others is embarrassing. / 服事別人是丟臉的。", correct: "A" },
+  { level: 7, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "The unforgiving servant was forgiven a huge debt but refused to forgive a small debt. What is the lesson?\n不饒恕人的惡僕被免了巨債，卻不肯免別人的小債。教訓是什麼？", a: "We should forgive others because God has forgiven us so much. / 我們應當饒恕別人，因為神已經大大饒恕了我們。", b: "Only forgive if the debt is small. / 只有小債才饒恕。", c: "God's forgiveness depends on our forgiving others first. / 神的饒恕取決於我們先饒恕別人。", d: "We only need to forgive once. / 我們只需要饒恕一次。", correct: "A" },
+  { level: 10, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "After Jesus rose from the dead, He forgave Peter for denying Him. What does this show?\n耶穌復活後，饒恕了否認祂的彼得。這說明了什麼？", a: "Jesus restores and forgives even after our failures. / 即使我們失敗了，耶穌仍然饒恕並恢復我們。", b: "Peter was no longer a disciple. / 彼得不再是門徒了。", c: "Jesus only forgives perfect people. / 耶穌只饒恕完美的人。", d: "Denying Jesus is unforgivable. / 否認耶穌是不可饒恕的。", correct: "A" },
+  { level: 9, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "Jesus taught us to pray, \"Forgive us our sins, as we forgive those who sin against us.\" What does this mean?\n耶穌教導我們禱告：「赦免我們的罪，因為我們也赦免凡虧欠我們的人。」這是什麼意思？", a: "Our forgiveness from God is connected to our willingness to forgive others. / 神對我們的饒恕與我們願意饒恕別人有關。", b: "We can earn forgiveness by forgiving others. / 我們可以靠饒恕別人賺取饒恕。", c: "God does not forgive us. / 神不饒恕我們。", d: "Forgiveness is automatic. / 饒恕是自動發生的。", correct: "A" },
+  { level: 13, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "Jesus said to love your enemies because \"God is kind to the ungrateful and wicked.\" How does this change how we treat difficult people?\n耶穌說要愛仇敵，因為「神恩待那忘恩的和作惡的」。這如何改變我們對待難相處之人的方式？", a: "We imitate God's kindness, not just being nice to those who are nice to us. / 我們效法神的恩慈，而不只是對善待我們的人好。", b: "We only love people who love us. / 我們只愛愛我們的人。", c: "We don't need to change anything. / 我們不需要改變。", d: "We only love our friends. / 我們只愛朋友。", correct: "A" },
+  { level: 11, module: "Module 6 寬恕人的耶穌 Jesus Who Forgives", category: "應用題 / Application", q: "At the Last Supper, Jesus knew Judas would betray Him, yet He still washed Judas's feet. What does this teach us about forgiveness?\n在最後的晚餐時，耶穌知道猶大會出賣祂，卻仍然洗猶大的腳。這教導了我們關於饒恕的什麼事？", a: "Forgiveness is offered even before someone repents; it flows from God's heart. / 饒恕甚至在對方悔改之前就已預備好；這是出於神的心意。", b: "Only forgive people who deserve it. / 只饒恕配得的人。", c: "Never trust anyone. / 永遠不要信任任何人。", d: "Forgiveness is weak. / 饒恕是軟弱的。", correct: "A" },
+  { level: 5, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "Joseph’s brothers had sold him into slavery. Many years later, when they came to Egypt for grain, Joseph recognized them. What did Joseph do first?\n約瑟的哥哥們曾把他賣為奴隸。許多年後，他們到埃及買糧時，約瑟認出了他們。約瑟首先做了什麼？", a: "He hid his identity and tested them. / 他隱瞞身分，試驗他們。", b: "He immediately killed them. / 他立刻殺了他們。", c: "He put them in prison forever. / 他把他們終身監禁。", d: "He pretended to be a stranger and gave them nothing. / 他假裝是陌生人，不給他們糧食。", correct: "A" },
+  { level: 4, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "In Luke 7, a sinful woman came to Jesus while He was eating at a Pharisee’s house. What did she do?\n在路加福音第7章，一個有罪的女人在耶穌於法利賽人家裡坐席時來了。她做了什麼？", a: "She wept and poured perfume on Jesus’ feet. / 她流淚，用香膏抹耶穌的腳。", b: "She shouted at Jesus. / 她向耶穌大喊。", c: "She asked Jesus for money. / 她向耶穌要錢。", d: "She ran away in fear. / 她害怕地跑走了。", correct: "A" },
+  { level: 4, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "The teachers of the law and Pharisees brought a woman to Jesus who had been caught in adultery. What did they want Jesus to do?\n文士和法利賽人帶了一個行淫時被捉的婦人到耶穌那裡。他們想叫耶穌做什麼？", a: "Stone her according to the Law of Moses. / 按照摩西的律法用石頭打死她。", b: "Set her free immediately. / 立刻釋放她。", c: "Marry her. / 娶她為妻。", d: "Send her to Rome. / 把她送到羅馬。", correct: "A" },
+  { level: 8, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "When Joseph finally revealed himself to his brothers, what was their reaction?\n當約瑟終於向哥哥們表明身分時，他們的反應是什麼？", a: "They were terrified and troubled. / 他們驚慌害怕。", b: "They were happy and celebrated. / 他們高興慶祝。", c: "They tried to kill him again. / 他們又想殺他。", d: "They ran away from Egypt. / 他們逃離埃及。", correct: "A" },
+  { level: 7, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "Jesus told a parable to Simon the Pharisee about two debtors. One owed 500 denarii, the other 50. Both were forgiven. What was the point?\n耶穌對法利賽人西門講了一個比喻，兩個人欠債：一個欠五兩銀子，一個欠五十兩銀子。兩人都被赦免。重點是什麼？", a: "The one who is forgiven more loves more. / 多得赦免的人，愛也更多。", b: "The one who owes less is better. / 欠債少的人更好。", c: "Money is more important than love. / 金錢比愛更重要。", d: "Forgiveness does not matter. / 赦免不重要。", correct: "A" },
+  { level: 10, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "When the religious leaders kept asking Jesus about stoning the woman caught in adultery, what did Jesus do?\n當宗教領袖不斷追問耶穌如何處理那行淫的婦人時，耶穌做了什麼？", a: "He wrote on the ground with His finger. / 祂用指頭在地上寫字。", b: "He ran away from the temple. / 祂跑離聖殿。", c: "He called the Roman soldiers. / 祂叫了羅馬兵丁。", d: "He picked up stones to throw first. / 祂拿起石頭要先丟。", correct: "A" },
+  { level: 11, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "After Joseph tested his brothers and saw that they had changed (Judah offered himself for Benjamin), what did Joseph do?\n約瑟試驗哥哥們，看見他們改變了（猶大願意為便雅憫作擔保），約瑟做了什麼？", a: "He wept aloud and forgave them, revealing his identity. / 他放聲大哭，饒恕他們，表明自己的身分。", b: "He sent them away without grain. / 他不給糧食就打發他們走了。", c: "He imprisoned Judah. / 他把猶大關進監牢。", d: "He forgot about Benjamin. / 他忘了便雅憫。", correct: "A" },
+  { level: 12, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "In Genesis, Joseph told his brothers, \"You intended to harm me, but God intended it for ____.\" What word completes the verse?\n在創世記，約瑟對哥哥們說：「從前你們的意思是要害我，但神的意思原是____。」哪個詞能完成這節經文？", a: "Good / 好的", b: "Evil / 壞的", c: "Nothing / 沒有意思", d: "Revenge / 為我復仇", correct: "A" },
+  { level: 12, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "The woman with perfume in Luke 7 was forgiven of her many sins. What evidence showed she understood her forgiveness?\n路加福音第7章中用香膏抹耶穌的婦人，許多的罪都被赦免了。什麼證據表明她明白自己被赦免了？", a: "Her great love and humble actions toward Jesus. / 她對耶穌極大的愛和謙卑的行動。", b: "She gave Jesus a large amount of money. / 她給了耶穌一大筆錢。", c: "She built a church. / 她建了一座教堂。", d: "She left town forever. / 她永遠離開了那城。", correct: "A" },
+  { level: 7, module: "Module 7 我們如何寬恕 How do we forgive?", category: "事件題 / What Event Happened? ", q: "When Jesus said, \"Let any one of you who is without sin be the first to throw a stone,\" what happened?\n耶穌說：「你們中間誰是沒有罪的，誰就可以先拿石頭打她。」結果怎麼樣？", a: "One by one, they left, starting with the oldest. / 他們一個一個地走了，從年老的開始。", b: "Everyone picked up stones. / 每個人都拿起了石頭。", c: "They arrested Jesus. / 他們逮捕了耶穌。", d: "They stoned the woman anyway. / 他們還是用石頭打了那婦人。", correct: "A" },
+  { level: 5, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "Who was Joseph’s father that loved him so much?\n誰是極度疼愛約瑟的父親？", a: "Jacob (Israel) / 雅各（以色列）", b: "Abraham / 亞伯拉罕", c: "Isaac / 以撒", d: "Laban / 拉班", correct: "A" },
+  { level: 6, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "Where did Joseph’s brothers come to buy grain during the famine?\n饑荒期間，約瑟的哥哥們到哪裡去買糧？", a: "Egypt / 埃及", b: "Canaan / 迦南", c: "Babylon / 巴比倫", d: "Assyria / 亞述", correct: "A" },
+  { level: 10, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "In John 8, where did Jesus teach when the religious leaders brought the adulterous woman to Him?\n在約翰福音第8章，宗教領袖把行淫的婦人帶到耶穌那裡時，耶穌正在哪裡教導？", a: "The temple courts / 殿裡", b: "The mountain / 山上", c: "The seashore / 海邊", d: "The wilderness / 曠野", correct: "A" },
+  { level: 8, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "Who was the brother of Joseph that did not go to Egypt the first time but came the second time?\n約瑟的哪一個兄弟第一次沒有去埃及，第二次才去？", a: "Benjamin / 便雅憫", b: "Reuben / 流便", c: "Simeon / 西緬", d: "Judah / 猶大", correct: "A" },
+  { level: 11, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "The sinful woman in Luke 7 had a specific object with her. What was it?\n路加福音第7章中有罪的女人帶了一件特別的物品。那是什麼？", a: "An alabaster jar of perfume / 一瓶玉瓶盛著的香膏", b: "A bag of silver / 一袋銀子", c: "A scroll of the Law / 一卷律法書", d: "A blanket / 一條毯子", correct: "A" },
+  { level: 4, module: "Module 7 我們如何寬恕 How do we forgive?", category: "何時, 何人? / When and Who?", q: "Who was the Egyptian official that Joseph served under before becoming governor?\n約瑟在成為宰相之前，曾經服事過哪一位埃及官員？", a: "Potiphar / 波提乏", b: "Pharaoh / 法老", c: "The baker / 膳長", d: "The cupbearer / 酒政", correct: "A" },
+  { level: 5, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Joseph forgave his brothers even though they had done something terrible to him. What does this teach us?\n約瑟饒恕了他的哥哥們，儘管他們對他做了很壞的事。這教導了我們什麼？", a: "We should forgive others even when they hurt us deeply. / 即使別人深深傷害了我們，我們也應當饒恕他們。", b: "We should only forgive if they apologize first. / 只有他們先道歉，我們才饒恕。", c: "We can hold a grudge forever. / 我們可以永遠懷恨在心。", d: "Forgiveness is only for small mistakes. / 饒恕只適用於小錯誤。", correct: "A" },
+  { level: 4, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Jesus told the woman caught in adultery, \"Neither do I condemn you. Go and sin no more.\" What does this show?\n耶穌對行淫時被捉的婦人說：「我也不定你的罪。去吧，從此不要再犯罪了。」這說明了什麼？", a: "Forgiveness includes a call to change our lives. / 饒恕包含要我們改變生活的呼召。", b: "We can keep sinning because Jesus forgives. / 我們可以繼續犯罪，因為耶穌會饒恕。", c: "Jesus only forgave her, no change needed. / 耶穌只饒恕她，不需要改變。", d: "Everyone gets a second chance without any responsibility. / 每個人都可以無責任地得到第二次機會。", correct: "A" },
+  { level: 4, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "The sinful woman in Luke 7 showed great love to Jesus. Where did that love come from?\n路加福音第7章中有罪的女人向耶穌顯出極大的愛。這愛從哪裡來？", a: "From knowing she was forgiven much. / 從知道自己得赦免很多而來。", b: "From being paid to love Jesus. / 從被雇用來愛耶穌而來。", c: "From being forced by Simon. / 從被西門強迫而來。", d: "From being born a loving person. / 從天生就是有愛心的人而來。", correct: "A" },
+  { level: 7, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Joseph could have taken revenge on his brothers, but instead he said, \"Am I in the place of God?\" What does this teach us about forgiveness?\n約瑟本可以報復哥哥們，但他卻說：「我豈能代替神呢？」這教導了我們關於饒恕的什麼事？", a: "Forgiveness means leaving judgment to God. / 饒恕意味著把審判留給神。", b: "We should punish others ourselves. / 我們應當自己懲罰別人。", c: "God doesn't care about justice. / 神不在乎公義。", d: "Revenge is always good. / 報仇總是好的。", correct: "A" },
+  { level: 8, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Joseph wept many times when he saw his brothers. What do his tears show about forgiveness?\n約瑟見到哥哥們時多次流淚。他的眼淚說明了饒恕的什麼事？", a: "Forgiveness is not easy; it involves real emotion and pain. / 饒恕並不容易，它包含真實的情感和痛苦。", b: "Forgiveness means you never feel sad again. / 饒恕意味著你從此不再難過。", c: "Crying is a sign of weakness. / 流淚是軟弱的表現。", d: "Joseph was angry, not forgiving. / 約瑟不是饒恕，而是生氣。", correct: "A" },
+  { level: 11, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Joseph tested his brothers before revealing himself. What does this teach us about forgiveness and trust?\n約瑟在表明身分之前試驗了他的哥哥們。這教導了我們關於饒恕和信任的什麼事？", a: "Forgiveness can be given even before trust is fully restored. / 即使在信任完全恢復之前，饒恕也可以給出。", b: "You must trust someone completely before forgiving them. / 你必須完全信任一個人才能饒恕他。", c: "Testing people is always wrong. / 試驗人總是錯的。", d: "Forgiveness means forgetting everything immediately. / 饒恕意味著立刻忘記一切。", correct: "A" },
+  { level: 13, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "When the accusers of the adulterous woman left one by one, they were convicted by their own conscience. What does this say about judging others?\n控告行淫婦人的人一個一個地離開了，因為他們的良心受了譴責。這對論斷別人有什麼提醒？", a: "We must examine our own sin before judging others. / 我們在論斷別人之前，必須先審查自己的罪。", b: "We have no sin at all. / 我們根本沒有罪。", c: "Only other people have sin. / 只有別人有罪。", d: "We should always judge others harshly. / 我們應當總是嚴厲地論斷別人。", correct: "A" },
+  { level: 10, module: "Module 7 我們如何寬恕 How do we forgive?", category: "應用題 / Application", q: "Joseph told his brothers, \"God sent me ahead of you to save your lives.\" How does this change how we see hurtful things people do to us?\n約瑟對哥哥們說：「神差我在你們以先來，為要保全你們的生命。」這如何改變我們看待別人傷害我們的方式？", a: "God can use even evil actions for a good purpose. / 神甚至可以使用惡意的行動來成就美意。", b: "God only causes good things, never hard things. / 神只促成好事，從不允許困難。", c: "Hurtful things are always meaningless. / 傷害人的事總是沒有意義的。", d: "We should pretend nothing bad happened. / 我們應當假裝什麼壞事都沒發生。", correct: "A" }
 ];
 
 // ======================== STATE ========================
@@ -1206,6 +1069,7 @@ function loadQuestion() {
   usedQuestions[currentLevel + '_' + currentQuestion.q] = true;
 
   const info = MONEY_LADDER[currentLevel - 1];
+  document.getElementById('module-badge').textContent = currentQuestion.module || '';
   document.getElementById('category-badge').textContent = currentQuestion.category || '';
   document.getElementById('level-badge').textContent = `LEVEL ${currentLevel} — ${info.val}`;
   document.getElementById('question-text').textContent = currentQuestion.q;
@@ -1263,6 +1127,9 @@ function advanceIfNoQuestion() {
 
 function selectAnswer(idx) {
   if (answersLocked) return;
+
+  const selSnd = document.getElementById('selected-sound');
+  if (selSnd) { selSnd.currentTime = 0; selSnd.play(); }
 
   const btnIds = ['btn-a','btn-b','btn-c','btn-d'];
 
@@ -1453,7 +1320,7 @@ function useAudience() {
 
   const votes = generateAudienceVotes(correctShuffledIndex);
   const labels = ['A','B','C','D'];
-  const MAX_BAR_PX = 100;
+  const MAX_BAR_PX = 300;
 
   const container = document.getElementById('audience-bars');
   container.innerHTML = '';
@@ -1626,3 +1493,4 @@ document.addEventListener('click', function playOpening() {
 </script>
 </body>
 </html>
+
